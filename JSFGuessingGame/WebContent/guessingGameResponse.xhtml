@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>Guessing Game</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h:outputText value="#{guessingGame.message}" style="color:red;font-sise:12px;font-weight:bold"></h:outputText>
+		<br/>
+		<h3>Do you want to play a game once again?</h3>
+		<br/>
+		<h:commandButton value="Reset" action="#{guessingGame.resetGame}"></h:commandButton>
+	</h:form>
+</h:body>
+</html>

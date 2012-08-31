@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>Guessing Game</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h3>Hi, I am thinking of a number from #{guessingGame.minimum} to #{guessingGame.maximum}. Can you guess it?</h3>
+		<br/>
+		<h:inputText id="userNumber" value="#{guessingGame.userNumber}">
+			<f:validateLongRange minimum="#{guessingGame.minimum}" maximum="#{guessingGame.maximum}"></f:validateLongRange>
+		 </h:inputText>
+		 <h:message for="userNumber"></h:message>
+		 <br/>
+		 <h:outputText value="#{guessingGame.message}" style="color:red;font-sise:12px;font-weight:bold"></h:outputText>
+		 <br/>
+		 <h:commandButton value="Submit" action="#{guessingGame.playGame}"></h:commandButton>
+	</h:form>
+</h:body>
+</html>
